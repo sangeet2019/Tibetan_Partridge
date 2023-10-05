@@ -1,4 +1,75 @@
-Overview
+## Overview
 
 This repository contains scripts and documentation for the genomic/transcriptomic analysis conducted in the paper titled "Genomic Variation, Population History, and Long-Term Genetic Adaptation to High Altitudes in Tibetan Partridge (Perdix hodgsoniae)."
 
+## Paper Citation
+
+Please cite our paper if you use any part of this analysis
+
+Catalina Palacios, Pengcheng Wang, Nan Wang, Megan A Brown, Lukas Capatosto, Juan Du, Jiahu Jiang, Qingze Zhang, Nishma Dahal, Sangeet Lamichhaney, Genomic variation, population history, and long-term genetic adaptation to high altitudes in Tibetan Partridge (Perdix hodgsoniae), Molecular Biology and Evolution, 2023;, msad214, https://doi.org/10.1093/molbev/msad214
+
+##################### Genomics Analysis Workflow
+
+### Step 1: Data Preprocessing
+
+1.1. Data Quality Control:
+
+01_data_quality_control.sh: Script for quality control of raw sequencing data.
+
+1.2. Data Alignment:
+
+02_data_alignment.sh: Script for aligning sequencing data to the reference genome.
+
+## 1.3. Variant Calling:
+
+03_variant_calling.sh: Script for variant calling using tools such as GATK or bcftools.
+
+### Step 2: Population Genetics Analyses
+
+2.1. Population Structure:
+
+04_population_structure.sh: Script for assessing population structure.
+
+2.2. Demographic History:
+
+05_demographic_history.sh: Script for inferring demographic history.
+
+2.3. Selection Analysis:
+
+06_selection_analysis.sh: Script for detecting signatures of natural selection using.
+
+##################### Transcriptomics Analysis Workflow
+
+#### Step 1: Data Preprocessing
+
+1.1. Quality Control:
+
+01_quality_control.sh: Script for assessing data quality and filtering low-quality reads or transcripts.
+
+1.2. Data Alignment/Mapping:
+
+02_alignment.sh: Script for mapping sequencing reads to a reference genome or transcriptome.
+
+1.3. Quantification:
+
+03_quantification.sh: Script for quantifying gene/transcript expression levels.
+
+#### Step 2: Differential Expression Analysis
+
+2.1. Data Normalization:
+
+04_normalization.R: R script for normalizing expression data using methods like DESeq2 or edgeR.
+
+2.2. Differential Expression:
+
+05_differential_expression.R: R script for conducting differential expression analysis to identify significantly differentially expressed genes/transcripts.
+
+#### Step 3: Functional Enrichment Analysis
+
+3.1. GO Enrichment:
+
+06_GO_enrichment.R: R script for Gene Ontology (GO) term enrichment analysis of differentially expressed genes.
+
+3.2. Pathway Enrichment:
+
+07_pathway_enrichment.R: R script for pathway enrichment analysis using databases like KEGG or Reactome.
